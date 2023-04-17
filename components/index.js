@@ -3,7 +3,6 @@ export { default as HeroBanner } from "./HeroBanner";
 export { default as NavBar } from "./NavBar";
 export { default as AccountModal } from "./AccountModal";
 export { default as Main } from "./Main";
-export { default as ItemCard } from "./ItemCard";
 export { default as RecommendProducts } from "./RecommendProducts";
 export { default as ModalWithForm } from "./ModalWithForm";
 export { default as RegisterModal } from "./RegisterModal";

@@ -135,7 +135,6 @@ body,
   max-width: fit-content;
   border: none;
   background: transparent;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -163,6 +162,7 @@ body,
   border-radius: 20px;
   padding: 30px 50px 30px 50px;
   position: relative;
+  margin: 0 0 20px 0;
 }
 
 .hero-banner__header-content {
@@ -235,4 +235,113 @@ body,
   color: #5f5f5f;
   font-weight: 100;
   text-align: end;
+}
+
+.main {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+}
+
+.main__product-lists {
+  max-width: 1292px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+
+.card {
+  width: 315px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.product-link {
+  text-decoration: none;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.card__image {
+  width: 315px;
+  height: 290px;
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9;
+}
+
+.card__detail {
+  max-width: 290px;
+}
+
+.card__description {
+  max-height: 100px ;
+  overflow: hidden;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 5px 5px 10px 10px;
+  color: #000;
+}
+
+.card__price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0 0 0 10px;
+  color: #000;
+}
+
+.card__price-number {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.card__button {
+  width: 295px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin: 0px 10px 0px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 1;
+}
+
+.card__add-button {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  background-color: #1FCCF1;
+  
+}
+
+.card__add-checkout {
+  margin-bottom: 10px;
+  background-color: #E0D813;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }

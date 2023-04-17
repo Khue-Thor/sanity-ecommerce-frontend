@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import ProductCard from "./ProductCard";
 
-const Main = () => {
+const Main = ({ products }) => {
   return (
-    <div>Main</div>
-  )
-}
+    <main className="main">
+      <ul className="main__product-lists">
+        {products?.map((product) => (
+          <ProductCard key={product._id} product={product} />
+        ))}
+        {console.log(products)}
+      </ul>
+    </main>
+  );
+};
 
-export default Main
+export default Main;

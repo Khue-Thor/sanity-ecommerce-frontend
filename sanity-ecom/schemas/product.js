@@ -13,8 +13,8 @@ export default {
       }
     },
     { 
-      name: 'name',
-      title: 'Name',
+      name: 'desc',
+      title: 'Desc',
       type: 'string',
     },
     { 
@@ -30,11 +30,6 @@ export default {
       name: 'price',
       title: 'Price',
       type: 'number',
-    },
-    { 
-      name: 'details',
-      title: 'Details',
-      type: 'string',
     }
   ]
 }

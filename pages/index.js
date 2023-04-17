@@ -1,15 +1,16 @@
 import React from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner} from "../components";
+import { Header, HeroBanner, Main } from "../components";
+import Product from "@/sanity-ecom/schemas/product";
 
-const index = ({products, bannerData}) => {
+const index = ({ products, bannerData }) => {
   return (
     <div className="app">
       <Header />
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
-      <div>
-        {products?.map((product) => product.name)}
-      </div>
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      <Main products={products}>
+
+      </Main>
     </div>
   );
 };
@@ -22,8 +23,8 @@ export const getServerSideProps = async () => {
   const bannerData = await client.fetch(bannerQuery);
 
   return {
-    props: { products, bannerData }
-  }
-}
+    props: { products, bannerData },
+  };
+};
 
 export default index;
