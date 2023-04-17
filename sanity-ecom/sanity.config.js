@@ -5,10 +5,10 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'se-ecommerce',
+  title: 'sanity-ecom',
 
-  projectId: 'vuv2hgpw',
-  dataset: 'se-ecommerce',
+  projectId: 'na65dlmc',
+  dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
 
