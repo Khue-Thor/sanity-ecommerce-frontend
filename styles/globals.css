@@ -1,6 +1,7 @@
 html,
 body,
 * {
+ 
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
@@ -11,12 +12,19 @@ body,
   width: 0px;
 }
 
-.app {
+.App {
   max-width: 1440px;
   margin: auto;
   background-color: #fff8f4;
   padding: 0 0 50px 0;
+
 }
+
+.App-content {
+ max-width: 100%;
+
+}
+
 
 .header {
   background-color: #eaeaea;
@@ -444,4 +452,48 @@ body,
   right: 37%;
   width: 500px;
   height: 500px;
+}
+
+/*---------Acccout Modal---------*/
+
+.modal {
+  position: absolute;
+  top: 78px;
+  right: 250px;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal__container {
+  max-width: 240px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+.modal__signin-link {
+  width: 170px;
+  padding: 10px 30px 10px 30px;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  background-color: #052759;
+  color: #ffffff;
+  margin: auto;
+}
+.modal__signin-link:hover {
+  cursor: pointer;
+  background-color: #E0D813;
+  color: #000000;
+}
+
+.modal__signup-link {
+  text-decoration: none;
+}
+
+.modal__signup-link:hover {
+  text-decoration: underline rgb(248, 119, 21);
+  color: rgb(248, 119, 21);
 }

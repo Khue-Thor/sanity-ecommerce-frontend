@@ -23,7 +23,7 @@ const ProductCard = ({ product: { image, desc, slug, price } }) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default ProductCard;

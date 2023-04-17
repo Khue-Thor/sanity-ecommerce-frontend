@@ -8,7 +8,6 @@ const Main = ({ products }) => {
         {products?.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
-        {console.log(products)}
       </ul>
     </main>
   );

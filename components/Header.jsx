@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
+
 import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
 import carticon from "../public/images/carticon.svg";
+
 
 const Header = ({ onAccountOpen }) => {
   return (

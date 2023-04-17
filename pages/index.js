@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner, Main, FooterBanner } from "../components";
-
+import { Header, HeroBanner, Main, FooterBanner, AccountModal } from "../components";
 
 const index = ({ products, bannerData }) => {
+  // const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  // const handleOpenAccountModal = () => setIsAccountModalOpen(true);
+
+  // const closeModal = () => {
+  //   setIsAccountModalOpen(false);
+  // };
+
+  useEffect(() => {
+    function handleOverlayClose(e) {
+      if (!e.target.closest(".modal__content")) {
+        closeModal();
+      }
+    }
+    document.addEventListener("mousedown", handleOverlayClose);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOverlayClose);
+    };
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
-      <Main products={products}/>
-      <FooterBanner footerBanner={bannerData && bannerData[0]}/>
+    <div className="App">
+      <div className="App-content">
+        <Header />
+
+        <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
+        <Main products={products} />
+
+        <FooterBanner footerBanner={bannerData && bannerData[0]} />
+      </div>
+      {/* {isAccountModalOpen && (
+        <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />
+      )} */}
     </div>
   );
 };
