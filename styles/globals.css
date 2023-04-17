@@ -271,6 +271,7 @@ body,
   display: flex;
   flex-direction: column;
   background-color: #fff;
+
 }
 
 .card__image {
@@ -279,6 +280,14 @@ body,
   margin: 0;
   padding: 0;
   background-color: #d9d9d9;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.card__image:hover {
+  cursor: pointer;
+  transform: scale(1.05,1.05);
+  border-radius: 10px;
 }
 
 .card__detail {
@@ -328,6 +337,8 @@ body,
   font-size: 16px;
   line-height: 20px;
   opacity: 1;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
 }
 
 .card__add-button {
@@ -344,4 +355,5 @@ body,
 .card__button:hover {
   cursor: pointer;
   opacity: 0.7;
+  transform: scale(1.05,1.05);
 }
