@@ -1,14 +1,12 @@
 import React from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner} from "../components/index";
+import { Header, HeroBanner} from "../components";
 
 const index = ({products, bannerData}) => {
   return (
     <div className="app">
       <Header />
-        
-      <HeroBanner heroBanner={bannerData}/>
-      {console.log(bannerData)}
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
       <div>
         {products?.map((product) => product.name)}
       </div>
