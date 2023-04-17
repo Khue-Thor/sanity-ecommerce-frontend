@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
 import carticon from "../public/images/carticon.svg";
@@ -8,7 +9,7 @@ const Header = ({ onAccountOpen }) => {
   return (
     <div className="header">
       <div className="header__container">
-        <img src={logo} alt="logo"className="header__logo" />
+        <Image src={logo} alt="logo"className="header__logo" />
 
         <div className="header__search-wrapper">
           <input
@@ -28,7 +29,7 @@ const Header = ({ onAccountOpen }) => {
           <button className="header__button">Orders</button>
 
           <button className="header__button">
-            <img src={carticon} alt=""/>
+            <Image src={carticon} alt=""/>
             Cart
           </button>
         </div>
