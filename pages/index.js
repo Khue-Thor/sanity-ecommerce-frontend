@@ -8,9 +8,7 @@ const index = ({ products, bannerData }) => {
     <div className="app">
       <Header />
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      <Main products={products}>
-
-      </Main>
+      <Main products={products}/>
     </div>
   );
 };

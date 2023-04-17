@@ -12,7 +12,7 @@ const ProductCard = ({ product: { image, desc, slug, price } }) => {
         <div className="card__detail">
           <p className="card__description">{desc}</p>
           <p className="card__price">
-            price: <span className="card__price-number">{price}</span>
+            price: <span className="card__price-number">${price}</span>
           </p>
           <button type="button" className="card__add-button card__button">
             Add To Cart
@@ -23,7 +23,7 @@ const ProductCard = ({ product: { image, desc, slug, price } }) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default ProductCard;
