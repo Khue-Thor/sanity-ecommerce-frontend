@@ -243,7 +243,7 @@ body,
   max-width: 1440px;
   display: flex;
   justify-content: center;
-  margin: 0 30px 20px 30px;
+  margin: 0 30px 100px 30px;
 }
 
 .main__product-lists {
@@ -273,7 +273,6 @@ body,
   display: flex;
   flex-direction: column;
   background-color: #fff;
-
 }
 
 .card__image {
@@ -288,7 +287,7 @@ body,
 
 .card__image:hover {
   cursor: pointer;
-  transform: scale(1.05,1.05);
+  transform: scale(1.05, 1.05);
   border-radius: 10px;
 }
 
@@ -357,11 +356,8 @@ body,
 .card__button:hover {
   cursor: pointer;
   opacity: 0.7;
-  transform: scale(1.05,1.05);
+  transform: scale(1.05, 1.05);
 }
-
-
-
 
 /* Footer Banner */
 
@@ -380,8 +376,9 @@ body,
   position: relative;
   margin: 0 30px 20px 30px;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 .footer-banner__discount {
   font-size: 14px;
@@ -404,4 +401,47 @@ body,
   font-size: 14px;
   padding: 0;
   margin: 0;
+}
+
+.footer-banner__small-desc1 {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.footer-banner__mid-desc {
+  font-size: 4em;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.footer-banner__small-desc2 {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.footer-banner__button {
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #f02d34;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10000 !important;
+  width: 120px;
+  height: 50px;
+}
+
+.footer-banner__image {
+  position: absolute;
+  top: -14%;
+  right: 37%;
+  width: 500px;
+  height: 500px;
 }
