@@ -7,7 +7,7 @@ const index = ({ products, bannerData }) => {
   return (
     <div className="app">
       <Header />
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
       <Main products={products}/>
       <FooterBanner footerBanner={bannerData && bannerData[0]}/>
     </div>

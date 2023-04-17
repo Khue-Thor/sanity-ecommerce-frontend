@@ -184,10 +184,10 @@ body,
 .hero-banner__large-text {
   color: white;
   font-size: 8em;
-  margin-left: -20px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  margin-left: -40px;
 }
 
 .hero-banner__image {
@@ -376,7 +376,32 @@ body,
   height: 450px;
   background-color: #ff3305;
   border-radius: 20px;
-  padding: 30px 50px 30px 50px;
+  padding: 110px 50px 30px 50px;
   position: relative;
   margin: 0 30px 20px 30px;
+  color: white;
+}
+
+
+.footer-banner__discount {
+  font-size: 14px;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.footer-banner__title {
+  font-size: 5em;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 0px 10px;
+}
+
+.footer-banner__title:last-of-type {
+  margin-bottom: 20px;
+}
+
+.footer-banner__sale-date {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
