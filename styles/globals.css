@@ -162,7 +162,7 @@ body,
   border-radius: 20px;
   padding: 30px 50px 30px 50px;
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 30px 20px 30px;
 }
 
 .hero-banner__header-content {
@@ -243,6 +243,7 @@ body,
   max-width: 1440px;
   display: flex;
   justify-content: center;
+  margin: 0 30px 20px 30px;
 }
 
 .main__product-lists {
@@ -253,6 +254,7 @@ body,
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 10px;
+  justify-content: center;
 }
 
 .card {
@@ -356,4 +358,25 @@ body,
   cursor: pointer;
   opacity: 0.7;
   transform: scale(1.05,1.05);
+}
+
+
+
+
+/* Footer Banner */
+
+.footer-banner__section {
+  max-width: 1490px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-banner__container {
+  width: 1290px;
+  height: 450px;
+  background-color: #ff3305;
+  border-radius: 20px;
+  padding: 30px 50px 30px 50px;
+  position: relative;
+  margin: 0 30px 20px 30px;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner, Main } from "../components";
-import Product from "@/sanity-ecom/schemas/product";
+import { Header, HeroBanner, Main, FooterBanner } from "../components";
+
 
 const index = ({ products, bannerData }) => {
   return (
@@ -9,6 +9,7 @@ const index = ({ products, bannerData }) => {
       <Header />
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <Main products={products}/>
+      <FooterBanner footerBanner={bannerData && bannerData[0]}/>
     </div>
   );
 };
