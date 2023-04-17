@@ -4,7 +4,7 @@ import { Header, HeroBanner} from "../components/index";
 
 const index = ({products, bannerData}) => {
   return (
-    <>
+    <div className="app">
       <Header />
         
       <HeroBanner heroBanner={bannerData}/>
@@ -12,12 +12,12 @@ const index = ({products, bannerData}) => {
       <div>
         {products?.map((product) => product.name)}
       </div>
-    </>
+    </div>
   );
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "produc"]';
+  const query = '*[_type == "product"]';
   const products = await client.fetch(query);
 
   const bannerQuery = '*[_type == "banner"]';

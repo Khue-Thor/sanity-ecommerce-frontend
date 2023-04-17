@@ -1,29 +1,24 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import { urlFor } from '../lib/client';
+import { urlFor } from "../lib/client";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
-    <div className="hero-banner-container">
-      <div>
-        <p className="beats-solo">{heroBanner.smallText}</p>
-        <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
-        <img src={urlFor(heroBanner.image)} alt="headphones" className="hero-banner-image" />
-
-        <div>
-          <Link href={`/product/${heroBanner.product}`}>
-            <button type="button">{heroBanner.buttonText}</button>
-          </Link>
-          <div className="desc">
-            <h5>Description</h5>
-            <p>{heroBanner.desc}</p>
-          </div>
+    <div className="hero-banner__section">
+      <div className="hero-banner__container">
+        <div className="hero-banner__header-content">
+          <p className="hero-banner__small-text">Beats Solo</p>
+          <h3 className="hero-banner__mid-text">Wirless</h3>
+          <h1 className="hero-banner__large-text">HEADPHONE</h1>
+        </div>
+        <div className="hero-banner__bottom-container">
+          <button className="hero-banner__button">Shop now</button>
+          <div className="hero-banner__desc-content"></div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroBanner
+export default HeroBanner;

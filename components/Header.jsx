@@ -8,7 +8,7 @@ const Header = ({ onAccountOpen }) => {
   return (
     <div className="header">
       <div className="header__container">
-        <img src={logo} className="header__logo" />
+        <img src={logo} alt="logo"className="header__logo" />
 
         <div className="header__search-wrapper">
           <input
@@ -28,7 +28,7 @@ const Header = ({ onAccountOpen }) => {
           <button className="header__button">Orders</button>
 
           <button className="header__button">
-            <img src={carticon} />
+            <img src={carticon} alt=""/>
             Cart
           </button>
         </div>
