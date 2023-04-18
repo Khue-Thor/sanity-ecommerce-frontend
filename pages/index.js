@@ -3,12 +3,12 @@ import { client } from "../lib/client";
 import { Header, HeroBanner, Main, FooterBanner, AccountModal } from "../components";
 
 const index = ({ products, bannerData }) => {
-  // const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
-  // const handleOpenAccountModal = () => setIsAccountModalOpen(true);
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const handleOpenAccountModal = () => setIsAccountModalOpen(true);
 
-  // const closeModal = () => {
-  //   setIsAccountModalOpen(false);
-  // };
+  const closeModal = () => {
+    setIsAccountModalOpen(false);
+  };
 
   useEffect(() => {
     function handleOverlayClose(e) {
@@ -26,16 +26,17 @@ const index = ({ products, bannerData }) => {
   return (
     <div className="App">
       <div className="App-content">
-        <Header />
+        <Header onAccountOpen={handleOpenAccountModal} />
 
         <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
         <Main products={products} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
+       
       </div>
-      {/* {isAccountModalOpen && (
+      {isAccountModalOpen && (
         <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />
-      )} */}
+      )}
     </div>
   );
 };

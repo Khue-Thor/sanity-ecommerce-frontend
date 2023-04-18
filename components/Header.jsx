@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import {AiOutlineShopping} from 'react-icons/ai'
 
 import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
-import carticon from "../public/images/carticon.svg";
 
 
 const Header = ({ onAccountOpen }) => {
@@ -30,9 +30,9 @@ const Header = ({ onAccountOpen }) => {
 
           <button className="header__button">Orders</button>
 
-          <button className="header__button">
-            <Image src={carticon} alt=""/>
-            Cart
+          <button className="header__button" type="button">
+            <AiOutlineShopping className="header__cart-icon"/>
+            <span className="header__cart-item-qty">1</span>
           </button>
         </div>
       </div>
