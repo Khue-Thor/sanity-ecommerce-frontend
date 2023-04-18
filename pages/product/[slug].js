@@ -10,7 +10,7 @@ const ProductDetails = ({ product, products }) => {
       <div className="product__detail-container">
         <div>
           <div className="product__image-container">
-            <img src={urlFor(image && image[0])} className="product__image"/>
+            <img src={urlFor(image && image[0])} className="product__image" />
           </div>
           {/* <div className="product__small-image-container">
             {image?.map((item, i) => (
@@ -20,10 +20,10 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="product__detail-desc">
           <h4>Details:</h4>
+          <p className="product__desc">{desc}</p>
 
-          <p>{desc}</p>
-          <div>
-            <div>
+          <div className="product__rate-container">
+            <div className="product__stars-container">
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
@@ -32,26 +32,28 @@ const ProductDetails = ({ product, products }) => {
             </div>
             <p>(20)</p>
           </div>
-          <p>${price}</p>
-          <div className="product__quantity">
-            <h3>Quantity:</h3>
-            <p>
-              <span>
-                <AiOutlineMinus />
-              </span>
-              <span>0</span>
-              <span>
-                <AiOutlinePlus />
-              </span>
-            </p>
-          </div>
-          <div>
-            <button type="button" className="product__add-to-cart" onClick="">
-              Add to Cart
-            </button>
-            <button type="button" className="product__add-to-cart" onClick="">
-              Buy Now
-            </button>
+          <p className="product__price">${price}</p>
+          <div className="order-section-card">
+            <div className="product__quantity">
+              <h3>Quantity:</h3>
+              <p>
+                <span>
+                  <AiOutlineMinus />
+                </span>
+                <span>0</span>
+                <span>
+                  <AiOutlinePlus />
+                </span>
+              </p>
+            </div>
+            <div className="product__button-container">
+              <button type="button" className="product__add-to-cart product__button" onClick="">
+                Add to Cart
+              </button>
+              <button type="button" className="product__buy product__button" onClick="">
+                Buy Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
