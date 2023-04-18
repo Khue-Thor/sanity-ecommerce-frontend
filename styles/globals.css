@@ -602,17 +602,57 @@ body,
 .order-section-card {
   max-width: 407px;
   background-color: #ffffff;
-  border-radius: 2px;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 0 0 20px 0;
 }
 
 .product__quantity {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 9px 0 0 9px;
 }
 
-.product__button-container {
+.product__quantity-title {
+  margin: 0 0 10px 0;
+}
+
+.product__quantity-button-container{
+  border-radius: 10px;
+  display: flex;
+}
+
+.product__quantity-button {
+  display: flex;
+  width: fit-content;
+  border: 1px black solid;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.decrease-button {
+  border-radius: 10px 0 0 10px;
+}
+
+.increase-button {
+border-radius: 0 10px 10px 0;
+}
+
+.button-icon {
+  width: 40px;
+  height: 30px;
+}
+
+.quantity_count {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+}
+
+.product__order-button-container {
   margin: 0 9px 0 9px;
 }
 

@@ -35,18 +35,18 @@ const ProductDetails = ({ product, products }) => {
           <p className="product__price">${price}</p>
           <div className="order-section-card">
             <div className="product__quantity">
-              <h3>Quantity:</h3>
-              <p>
-                <span>
-                  <AiOutlineMinus />
+              <h3 className="product__quantity-title">Quantity:</h3>
+              <p className="product__quantity-button-container">
+                <span className="product__quantity-button decrease-button">
+                  <AiOutlineMinus className="button-icon"/>
                 </span>
-                <span>0</span>
-                <span>
-                  <AiOutlinePlus />
+                <span className="quantity_count">0</span>
+                <span className="product__quantity-button increase-button">
+                  <AiOutlinePlus className="button-icon"/>
                 </span>
               </p>
             </div>
-            <div className="product__button-container">
+            <div className="product__order-button-container">
               <button type="button" className="product__add-to-cart product__button" onClick="">
                 Add to Cart
               </button>
