@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner, Main, FooterBanner, AccountModal } from "../components";
+import { Header, HeroBanner, Main, FooterBanner, Footer, AccountModal } from "../components";
 
 const index = ({ products, bannerData }) => {
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
@@ -32,7 +32,7 @@ const index = ({ products, bannerData }) => {
         <Main products={products} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
-       
+        <Footer />
       </div>
       {isAccountModalOpen && (
         <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />

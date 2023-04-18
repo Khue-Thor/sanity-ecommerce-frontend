@@ -1,17 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import {AiOutlineShopping} from 'react-icons/ai'
+import { AiOutlineShopping } from "react-icons/ai";
 
 import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
 
-
 const Header = ({ onAccountOpen }) => {
   return (
     <div className="header">
       <div className="header__container">
-        <Image src={logo} alt="logo"className="header__logo" />
+        <Link href={"/"}>
+          <Image src={logo} alt="logo" className="header__logo" />
+        </Link>
 
         <div className="header__search-wrapper">
           <input
@@ -31,7 +32,7 @@ const Header = ({ onAccountOpen }) => {
           <button className="header__button">Orders</button>
 
           <button className="header__button" type="button">
-            <AiOutlineShopping className="header__cart-icon"/>
+            <AiOutlineShopping className="header__cart-icon" />
             <span className="header__cart-item-qty">1</span>
           </button>
         </div>

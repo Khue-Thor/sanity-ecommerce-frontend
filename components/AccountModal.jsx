@@ -10,7 +10,7 @@ const AccountModal = ({ onMouseLeaveCLose, onClickClose }) => {
             Sign In
           </button>
         </Link>
-        <p>
+        <p className="modal__description">
           New customer?{" "}
           <Link href={"/signup"} className="modal__signup-link" onClick={onClickClose}>
             Start here

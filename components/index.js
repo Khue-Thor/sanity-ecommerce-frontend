@@ -4,6 +4,7 @@ export { default as NavBar } from "./NavBar";
 export { default as AccountModal } from "./AccountModal";
 export { default as Main } from "./Main";
 export { default as FooterBanner } from "./FooterBanner";
+export { default as Footer } from "./Footer";
 export { default as ModalWithForm } from "./ModalWithForm";
 export { default as RegisterModal } from "./RegisterModal";
 export { default as LoginModal } from "./LoginModal";

@@ -484,6 +484,7 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 
@@ -495,18 +496,24 @@ body,
 }
 .modal__signin-link {
   width: 170px;
+  font-size: 15px;
+  font-weight: 700;
   padding: 10px 30px 10px 30px;
-  margin: auto;
   border-radius: 10px;
   border: none;
   background-color: #052759;
   color: #ffffff;
-  margin: auto;
+  margin: 0 0 10px 5px;
 }
 .modal__signin-link:hover {
   cursor: pointer;
   background-color: #E0D813;
   color: #000000;
+}
+
+.modal__description {
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .modal__signup-link {
@@ -516,4 +523,28 @@ body,
 .modal__signup-link:hover {
   text-decoration: underline rgb(248, 119, 21);
   color: rgb(248, 119, 21);
+}
+
+/* --------Footer---------*/
+
+.footer {
+  max-width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer__description {
+  margin: 0 0 10px 0;
+}
+
+.footer__github-link {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px 0 0;
+}
+
+.footer__linkedin-link {
+  width: 25px;
+  height: 25px;
 }
