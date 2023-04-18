@@ -548,3 +548,30 @@ body,
   width: 25px;
   height: 25px;
 }
+
+/* ---------- Products ---------- */
+
+.product {
+ max-width: 100%;
+ background-color: #fff8f4;
+}
+
+.product__detail-container {
+  display: flex;
+}
+
+.product__image-container {
+  max-width: 500px;
+  background-color: #d9d9d9;
+  margin: 100px 0 0 50px;
+  border-radius: 20px;
+}
+
+.product__image {
+  width: 500px;
+  height: 500px;
+}
+
+.product__detail-desc {
+  margin: 100px 50px 0 50px;
+}
