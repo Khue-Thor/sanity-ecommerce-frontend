@@ -1,0 +1,17 @@
+.main {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  margin: 0 30px 100px 30px;
+}
+
+.main__product-lists {
+  max-width: 1292px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 10px;
+  justify-content: center;
+}
