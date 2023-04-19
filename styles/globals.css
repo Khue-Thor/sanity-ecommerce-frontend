@@ -1,3 +1,14 @@
+@import url(./Header.css);
+@import url(./NavBar.css);
+@import url(./HeroBanner.css);
+@import url(./Main.css);
+@import url(./AccountModal.css);
+@import url(./RecProduct.css);
+@import url(./ProductCard.css);
+@import url(./FooterBanner.css);
+@import url(./Slug.css);
+@import url(./Footer.css);
+
 html,
 body,
 * {
