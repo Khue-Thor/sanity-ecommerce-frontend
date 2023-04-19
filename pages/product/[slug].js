@@ -11,7 +11,7 @@ const ProductDetails = ({ product, products }) => {
       <div className="product__detail-container">
         <div>
           <div className="product__image-container">
-            <img src={urlFor(image && image[index])} className="product__image" />
+            <img src={urlFor(image && image[index])} className="product__detail-image" />
           </div>
         </div>
         <div className="product__detail-desc">

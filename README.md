@@ -3,4 +3,4 @@ npm install --legacy-peer-deps
 
 
 
-use [slug] the [] mean it gonna be dinamic change
+use [slug] the [] mean it gonna be dynamic change
