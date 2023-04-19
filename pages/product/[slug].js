@@ -14,11 +14,6 @@ const ProductDetails = ({ product, products }) => {
           <div className="product__image-container">
             <img src={urlFor(image && image[0])} className="product__image" />
           </div>
-          {/* <div className="product__small-image-container">
-            {image?.map((item, i) => (
-              <img src={urlFor(item)} className="" onMouseEnter=""/>
-            ))}
-            </div> */}
         </div>
         <div className="product__detail-desc">
           <h4>Details:</h4>
@@ -34,7 +29,15 @@ const ProductDetails = ({ product, products }) => {
             </div>
             <p>(20)</p>
           </div>
+
           <p className="product__price">${price}</p>
+          <div className="product__small-image-wrapper">
+            {image?.map((item, i) => (
+              <div className="product__small-card">
+                <img src={urlFor(item)} className="product__small-image" onMouseEnter=""/>
+              </div>
+            ))}
+          </div>
           <div className="order-section-card">
             <div className="product__quantity">
               <h3 className="product__quantity-title">Quantity:</h3>
@@ -48,6 +51,7 @@ const ProductDetails = ({ product, products }) => {
                 </span>
               </p>
             </div>
+
             <div className="product__order-button-container">
               <button type="button" className="product__add-to-cart product__button" onClick="">
                 Add to Cart

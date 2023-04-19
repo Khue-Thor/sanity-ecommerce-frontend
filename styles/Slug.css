@@ -55,6 +55,23 @@
   margin: 0 0 15px 0;
 }
 
+.product__small-image-wrapper{
+  display: flex;
+  margin: 0 0 20px 0;
+  gap: 10px;
+}
+
+.product__small-card {
+  width: 126px;
+}
+
+.product__small-image {
+  width: 126px;
+  height: 133px;
+  border-radius: 15px;
+  background-color: #ebebeb;
+}
+
 .order-section-card {
   max-width: 407px;
   background-color: #ffffff;
@@ -172,5 +189,5 @@
 }
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  to { transform: translateX(-80%); }
 }
