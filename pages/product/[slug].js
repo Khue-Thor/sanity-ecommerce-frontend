@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
 import { RecProduct } from "@/components";
-import ProductCard from "@/components/ProductCard";
 
 const ProductDetails = ({ product, products }) => {
   const { image, desc, price } = product;
-
+  const [index, setIndex] = useState(0);
   return (
     <div className="product">
       <div className="product__detail-container">
         <div>
           <div className="product__image-container">
-            <img src={urlFor(image && image[0])} className="product__image" />
+            <img src={urlFor(image && image[index])} className="product__image" />
           </div>
         </div>
         <div className="product__detail-desc">
@@ -34,7 +33,14 @@ const ProductDetails = ({ product, products }) => {
           <div className="product__small-image-wrapper">
             {image?.map((item, i) => (
               <div className="product__small-card">
-                <img src={urlFor(item)} className="product__small-image" onMouseEnter=""/>
+                <img
+                  key={i}
+                  src={urlFor(item)}
+                  className={
+                    i === index ? "product__small-image selected-image" : "product__small-image"
+                  }
+                  onMouseEnter={() => setIndex(i)}
+                />
               </div>
             ))}
           </div>

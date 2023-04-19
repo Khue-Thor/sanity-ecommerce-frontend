@@ -72,6 +72,11 @@
   background-color: #ebebeb;
 }
 
+.selected-image {
+  background-color:#f02d34;
+  cursor: pointer;
+}
+
 .order-section-card {
   max-width: 407px;
   background-color: #ffffff;
