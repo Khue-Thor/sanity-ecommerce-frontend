@@ -25,8 +25,9 @@ const index = ({ products, bannerData }) => {
 
   return (
     <div className="App">
+       <Header onAccountOpen={handleOpenAccountModal} />
       <div className="App-content">
-        <Header onAccountOpen={handleOpenAccountModal} />
+       
 
         <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
         <Main products={products} />
