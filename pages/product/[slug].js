@@ -1,9 +1,11 @@
 import React from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
+import { RecProduct } from "@/components";
+import ProductCard from "@/components/ProductCard";
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, desc, price } = product;
+  const { image, desc, price } = product;
 
   return (
     <div className="product">
@@ -38,11 +40,11 @@ const ProductDetails = ({ product, products }) => {
               <h3 className="product__quantity-title">Quantity:</h3>
               <p className="product__quantity-button-container">
                 <span className="product__quantity-button decrease-button">
-                  <AiOutlineMinus className="button-icon"/>
+                  <AiOutlineMinus className="button-icon" />
                 </span>
                 <span className="quantity_count">0</span>
                 <span className="product__quantity-button increase-button">
-                  <AiOutlinePlus className="button-icon"/>
+                  <AiOutlinePlus className="button-icon" />
                 </span>
               </p>
             </div>
@@ -54,6 +56,16 @@ const ProductDetails = ({ product, products }) => {
                 Buy Now
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="maylike-products-wrapper">
+        <h2>You may also like</h2>
+        <div className="marquee">
+          <div className="maylike-products-container track">
+            {products.map((item) => (
+              <RecProduct key={item._id} product={item} />
+            ))}
           </div>
         </div>
       </div>
@@ -86,7 +98,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-  const productsQuery = '[_type == "product"]';
+  const productsQuery = '*[_type == "product"]';
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
