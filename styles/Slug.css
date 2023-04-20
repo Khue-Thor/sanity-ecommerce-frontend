@@ -107,6 +107,10 @@
   margin: 0;
 }
 
+.product__quantity-button:hover {
+  cursor: pointer;
+}
+
 .decrease-button {
   border-radius: 10px 0 0 10px;
 }
