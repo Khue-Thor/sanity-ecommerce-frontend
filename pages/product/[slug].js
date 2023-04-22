@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
 import { RecProduct } from "@/components";
-import { useStateContext } from "@/context/StateContext";
+import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
-
   const { image, desc, price } = product;
   const [index, setIndex] = useState(0);
 
-  const { increaseQty, decreaseQty, qty } = useStateContext;
+  const { decreaseQty, increaseQty, qty } = useStateContext();
 
   return (
     <div className="product">
@@ -37,16 +36,14 @@ const ProductDetails = ({ product, products }) => {
           <p className="product__price">${price}</p>
           <div className="product__small-image-wrapper">
             {image?.map((item, i) => (
-              <div className="product__small-card">
-                <img
-                  key={i}
-                  src={urlFor(item)}
-                  className={
-                    i === index ? "product__small-image selected-image" : "product__small-image"
-                  }
-                  onMouseEnter={() => setIndex(i)}
-                />
-              </div>
+              <img
+                key={i}
+                src={urlFor(item)}
+                className={
+                  i === index ? "product__small-image selected-image" : "product__small-image"
+                }
+                onMouseEnter={() => setIndex(i)}
+              />
             ))}
           </div>
           <div className="order-section-card">
@@ -58,7 +55,7 @@ const ProductDetails = ({ product, products }) => {
                 </span>
                 <span className="quantity_count">{qty}</span>
                 <span className="product__quantity-button increase-button">
-                  <AiOutlinePlus className="button-icon" onClick={increaseQty}/>
+                  <AiOutlinePlus className="button-icon" onClick={increaseQty} />
                 </span>
               </p>
             </div>
