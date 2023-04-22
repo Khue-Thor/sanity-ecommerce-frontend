@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
 import { RecProduct } from "@/components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
+
   const { image, desc, price } = product;
   const [index, setIndex] = useState(0);
-
-  const { decreaseQty, increaseQty, qty } = useStateContext();
+  const { decreaseQty, increaseQty, qty, onAdd } = useStateContext();
 
   return (
     <div className="product">
@@ -61,7 +61,11 @@ const ProductDetails = ({ product, products }) => {
             </div>
 
             <div className="product__order-button-container">
-              <button type="button" className="product__add-to-cart product__button" onClick="">
+              <button
+                type="button"
+                className="product__add-to-cart product__button"
+                onClick={() => onAdd(product, qty)}
+              >
                 Add to Cart
               </button>
               <button type="button" className="product__buy product__button" onClick="">

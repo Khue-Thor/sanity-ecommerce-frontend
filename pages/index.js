@@ -25,15 +25,13 @@ const index = ({ products, bannerData }) => {
 
   return (
     <div className="App">
-       <Header onAccountOpen={handleOpenAccountModal} />
+      <Header onAccountOpen={handleOpenAccountModal}/>
       <div className="App-content">
-       
-
         <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
         <Main products={products} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
-        <Footer />
+        <Footer/>
       </div>
       {isAccountModalOpen && (
         <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />

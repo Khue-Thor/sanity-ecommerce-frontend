@@ -5,8 +5,12 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
+import Cart from '../components/Cart'
+
+import { useStateContext } from "../context/StateContext";
 
 const Header = ({ onAccountOpen }) => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
   return (
     <div className="header">
       <div className="header__container">
@@ -31,10 +35,13 @@ const Header = ({ onAccountOpen }) => {
 
           <button className="header__button">Orders</button>
 
-          <button className="header__button" type="button">
+          <button className="header__button" type="button" onClick={() => setShowCart(true)}>
             <AiOutlineShopping className="header__cart-icon" />
-            <span className="header__cart-item-qty">1</span>
+            <span className="header__cart-item-qty">{totalQuantities}</span>
           </button>
+          {showCart && (
+            <Cart/>
+          )}
         </div>
       </div>
       <NavBar />
