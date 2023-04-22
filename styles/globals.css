@@ -32,3 +32,7 @@ body,
   max-width: 1440px;
   margin: auto;
 }
+
+.Cart {
+  padding: 200px 0 0 0;
+}

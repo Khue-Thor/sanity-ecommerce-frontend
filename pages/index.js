@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../lib/client";
-import { Header, HeroBanner, Main, FooterBanner, Footer, AccountModal } from "../components";
+import { Header, HeroBanner, Main, FooterBanner, Footer, AccountModal, Cart } from "../components";
+import Router from "next/router";
+
 
 const index = ({ products, bannerData }) => {
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);

@@ -10,4 +10,3 @@ export { default as ModalWithForm } from "./ModalWithForm";
 export { default as RegisterModal } from "./RegisterModal";
 export { default as LoginModal } from "./LoginModal";
 export { default as RecProduct } from "./RecProduct";
-export { default as Cart } from "./Cart";
