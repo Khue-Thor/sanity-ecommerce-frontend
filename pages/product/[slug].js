@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { client, urlFor } from "../../lib/client";
-import { RecProduct } from "@/components";
+import { RecProduct, Header, Footer } from "@/components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
@@ -11,6 +11,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div className="product">
+      <Header/>
       <div className="product__detail-container">
         <div>
           <div className="product__image-container">
@@ -84,6 +85,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

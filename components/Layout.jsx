@@ -8,9 +8,6 @@ import Header from './Header';
 const Layout = ({ children }) => {
   return (
     <div className="layout">
-      <Head>
-        <title>JS Mastery Store</title>
-      </Head>
       <header>
         <Header/>
       </header>
