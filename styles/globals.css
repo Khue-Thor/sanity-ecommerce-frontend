@@ -7,6 +7,7 @@
 @import url(./ProductCard.css);
 @import url(./FooterBanner.css);
 @import url(./Slug.css);
+@import url(./Cart.css);
 @import url(./Footer.css);
 
 html,
@@ -33,6 +34,3 @@ body,
   margin: auto;
 }
 
-.Cart {
-  padding: 200px 0 0 0;
-}

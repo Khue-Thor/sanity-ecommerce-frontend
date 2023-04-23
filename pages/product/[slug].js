@@ -5,10 +5,9 @@ import { RecProduct } from "@/components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
-
   const { image, desc, price } = product;
   const [index, setIndex] = useState(0);
-  const { decreaseQty, increaseQty, qty, onAdd } = useStateContext();
+  const { increaseQty, decreaseQty, qty, onAdd } = useStateContext();
 
   return (
     <div className="product">
@@ -54,8 +53,8 @@ const ProductDetails = ({ product, products }) => {
                   <AiOutlineMinus className="button-icon" />
                 </span>
                 <span className="quantity_count">{qty}</span>
-                <span className="product__quantity-button increase-button">
-                  <AiOutlinePlus className="button-icon" onClick={increaseQty} />
+                <span className="product__quantity-button increase-button " onClick={increaseQty}>
+                  <AiOutlinePlus className="button-icon" />
                 </span>
               </p>
             </div>
@@ -68,7 +67,7 @@ const ProductDetails = ({ product, products }) => {
               >
                 Add to Cart
               </button>
-              <button type="button" className="product__buy product__button" onClick="">
+              <button type="button" className="product__buy product__button">
                 Buy Now
               </button>
             </div>

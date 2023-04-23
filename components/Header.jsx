@@ -40,7 +40,6 @@ const Header = ({ onAccountOpen }) => {
               <span className="header__cart-item-qty">{totalQuantities}</span>
             </button>
           </Link>
-    
         </div>
       </div>
       <NavBar />
