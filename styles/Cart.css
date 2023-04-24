@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #fff8f4;
   padding: 180px 20px 0 20px;
+  
 }
 
 .cart__heading-container {
@@ -68,6 +69,7 @@
   display: flex;
   gap: 7px;
   flex-direction: column;
+  
 }
 
 .cart__product {
@@ -75,6 +77,23 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.remove-from-cart {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  color: red;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.remove-from-cart:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
 }
 
 .cart__product-image {

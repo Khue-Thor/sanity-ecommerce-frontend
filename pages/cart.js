@@ -40,6 +40,7 @@ const Cart = () => {
             {cartItems.length >= 1 &&
               cartItems.map((item) => (
                 <div className="cart__product" key={item._id}>
+                   <AiOutlineMinus className="remove-from-cart" />
                   <img src={urlFor(item?.image[0])} className="cart__product-image" />
                   <div className="cart__product-desc-container">
                     <p className="cart__product-desc">{item.desc}</p>
