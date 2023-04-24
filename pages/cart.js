@@ -14,7 +14,7 @@ import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 
 const Cart = () => {
-  const { totalPrice, totalQuantities, cartItems, toggleCartItemQuantity } =
+  const { totalPrice, totalQuantities, cartItems, toggleCartItemQuantity, onRemove } =
     useStateContext();
   return (
     <div className="cart">
@@ -40,7 +40,7 @@ const Cart = () => {
             {cartItems.length >= 1 &&
               cartItems.map((item) => (
                 <div className="cart__product" key={item._id}>
-                  <AiOutlineMinus className="remove-from-cart" />
+                  <AiOutlineMinus className="remove-from-cart" onClick={() => onRemove(item)}/>
                   <img src={urlFor(item?.image[0])} className="cart__product-image" />
                   <div className="cart__product-desc-container">
                     <p className="cart__product-desc">{item.desc}</p>
