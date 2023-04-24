@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import Image from "next/image";
 import NavBar from "./NavBar";
@@ -17,7 +17,7 @@ const Header = ({ onAccountOpen }) => {
           <Image src={logo} alt="logo" className="header__logo" />
         </Link>
 
-        <div className="header__search-wrapper">
+        {/* <div className="header__search-wrapper">
           <input
             className="header__search-input"
             type="text"
@@ -25,7 +25,7 @@ const Header = ({ onAccountOpen }) => {
             placeholder="Search..."
           />
           <button type="button" className="header__search-button" />
-        </div>
+        </div> */}
 
         <div className="header__menu-wrapper">
           <button className="header__button" onMouseOver={onAccountOpen}>
@@ -36,13 +36,13 @@ const Header = ({ onAccountOpen }) => {
 
           <Link href={"/cart"}>
             <button className="header__button" type="button">
-              <AiOutlineShopping className="header__cart-icon" />
+              <AiOutlineShoppingCart className="header__cart-icon" />
               <span className="header__cart-item-qty">{totalQuantities}</span>
             </button>
           </Link>
         </div>
       </div>
-      <NavBar />
+      {/* <NavBar /> */}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { urlFor } from "../lib/client";
 import Link from "next/link";
 
-const ProductCard = ({ product: { image, desc, slug, price } }) => {
+const ProductCard = ({ product: { image, desc, slug, price }, onAdd }) => {
   return (
     <div className="card">
       <div className="card__content">
@@ -14,7 +14,11 @@ const ProductCard = ({ product: { image, desc, slug, price } }) => {
           <p className="card__price">
             price: <span className="card__price-number">${price}</span>
           </p>
-          <button type="button" className="card__add-button card__button">
+          <button
+            type="button"
+            className="card__add-button card__button"
+            onClick={onAdd}
+          >
             Add To Cart
           </button>
           <button type="button" className="card__add-checkout card__button">
