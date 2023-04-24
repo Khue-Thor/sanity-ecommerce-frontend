@@ -14,7 +14,7 @@ import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 
 const Cart = () => {
-  const { totalPrice, totalQuantities, cartItems, increaseQty, decreaseQty, qty } =
+  const { totalPrice, totalQuantities, cartItems, toggleCartItemQuantity } =
     useStateContext();
   return (
     <div className="cart">
@@ -40,7 +40,7 @@ const Cart = () => {
             {cartItems.length >= 1 &&
               cartItems.map((item) => (
                 <div className="cart__product" key={item._id}>
-                   <AiOutlineMinus className="remove-from-cart" />
+                  <AiOutlineMinus className="remove-from-cart" />
                   <img src={urlFor(item?.image[0])} className="cart__product-image" />
                   <div className="cart__product-desc-container">
                     <p className="cart__product-desc">{item.desc}</p>
@@ -50,14 +50,14 @@ const Cart = () => {
                         <p className="product__quantity-button-container">
                           <span
                             className="product__quantity-button decrease-button"
-                            onClick={decreaseQty}
+                            onClick={() =>toggleCartItemQuantity(item._id, 'dec')}
                           >
                             <AiOutlineMinus className="button-icon" />
                           </span>
-                          <span className="quantity_count">{qty}</span>
+                          <span className="quantity_count">{item.quantity}</span>
                           <span
                             className="product__quantity-button increase-button "
-                            onClick={increaseQty}
+                            onClick={() =>toggleCartItemQuantity(item._id, 'inc')}
                           >
                             <AiOutlinePlus className="button-icon" />
                           </span>
@@ -71,10 +71,17 @@ const Cart = () => {
           </div>
         </div>
         <div className="cart__checkout-wrapper">
-          <p className="cart__checkout-total">
-            Subtotal ({totalQuantities} items):{" "}
-            <span className="cart__checkout-total-price">${totalPrice}</span>
-          </p>
+          {totalQuantities >= 2 ? (
+            <p className="cart__checkout-total">
+              Subtotal ({totalQuantities} items):{" "}
+              <span className="cart__checkout-total-price">${totalPrice}</span>
+            </p>
+          ) : (
+            <p className="cart__checkout-total">
+              Subtotal ({totalQuantities} item):{" "}
+              <span className="cart__checkout-total-price">${totalPrice}</span>
+            </p>
+          )}
           <button type="button" className="cart__checkout-button">
             Proceed to Checkout
           </button>
