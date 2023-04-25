@@ -16,7 +16,8 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "stripe": "^12.2.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6"
