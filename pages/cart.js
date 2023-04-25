@@ -63,7 +63,7 @@ const Cart = () => {
                           </span>
                         </p>
                       </div>
-                      <p className="cart__checkout-total-price">${item.price}</p>
+                      <p className="cart__checkout-total-price">${item.price.toFixed(2)}</p>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Cart = () => {
           {totalQuantities >= 2 ? (
             <p className="cart__checkout-total">
               Subtotal ({totalQuantities} items):{" "}
-              <span className="cart__checkout-total-price">${totalPrice}</span>
+              <span className="cart__checkout-total-price">${totalPrice.toFixed(2)}</span>
             </p>
           ) : (
             <p className="cart__checkout-total">
