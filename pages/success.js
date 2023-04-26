@@ -4,6 +4,7 @@ import { BsCartCheckFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 
 import { useStateContext } from "@/context/StateContext";
+import { fireStars } from "@/lib/utils";
 
 const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
@@ -12,7 +13,8 @@ const Success = () => {
     localStorage.clear();
     setCartItems([]);
     setTotalPrice(0);
-    setTotalQuantities(0)
+    setTotalQuantities(0);
+    fireStars();
   }, [])
   return (
     <div className="success">

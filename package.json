@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^1.52.1",
+    "canvas-confetti": "^1.6.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
