@@ -11,6 +11,8 @@
 @import url(./Footer.css);
 @import url(./succes.css);
 @import url(./signin.css);
+@import url(./signup.css);
+
 
 html,
 body,
@@ -36,3 +38,18 @@ body,
   margin: auto;
 }
 
+.modal-container {
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.page-back-arrow {
+  width: 30px;
+  height: 30px;
+  margin: 0 0 20px 0;
+}
+
+.page-back-arrow:hover {
+  color: #2995ae;
+}
