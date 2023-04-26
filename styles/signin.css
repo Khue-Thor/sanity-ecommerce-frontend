@@ -5,10 +5,20 @@
   align-items: center;
 }
 
-.sign-in__modal {
+.sign-in__modal-con {
   width: 350px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.sign-in__page-back-arrow {
+  width: 30px;
+  height: 30px;
+  margin: 0 0 20px 0;
+}
+
+.sign-in__page-back-arrow:hover {
+  color: #2995ae;
 }
 
 .modal__form-fieldset {
@@ -40,6 +50,7 @@
 .sign-in__page-ques {
   text-align: center;
   margin: 0 0 20px 0;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-btn {
@@ -69,5 +80,6 @@
 .modal-sign-up__btn {
   width: 330px;
   background-color: #f7e7e7;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0 0 20px 10px;
 }
