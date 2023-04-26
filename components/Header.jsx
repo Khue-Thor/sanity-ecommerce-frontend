@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+
+import AccountModal from "./AccountModal";
 
 import Image from "next/image";
 import NavBar from "./NavBar";
@@ -9,9 +11,28 @@ import logo from "../public/images/logo.svg";
 import { useStateContext } from "../context/StateContext";
 
 const Header = ({ onAccountOpen }) => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { totalQuantities } = useStateContext();
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const handleOpenAccountModal = () => setIsAccountModalOpen(true);
+
+  const closeModal = () => {
+    setIsAccountModalOpen(false);
+  };
+
+  useEffect(() => {
+    function handleOverlayClose(e) {
+      if (!e.target.closest(".modal__content")) {
+        closeModal();
+      }
+    }
+    document.addEventListener("mousedown", handleOverlayClose);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOverlayClose);
+    };
+  }, []);
   return (
-    <div className="header">
+    <div className="header" onMouseOver={handleOpenAccountModal}>
       <div className="header__container">
         <Link href={"/"}>
           <Image src={logo} alt="logo" className="header__logo" />
@@ -43,6 +64,9 @@ const Header = ({ onAccountOpen }) => {
         </div>
       </div>
       {/* <NavBar /> */}
+      {isAccountModalOpen && (
+        <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />
+      )}
     </div>
   );
 };

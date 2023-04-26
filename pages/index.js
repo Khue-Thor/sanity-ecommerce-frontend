@@ -3,41 +3,18 @@ import { client } from "../lib/client";
 import { Header, HeroBanner, Main, FooterBanner, Footer, AccountModal, Cart } from "../components";
 import Router from "next/router";
 
-
 const index = ({ products, bannerData }) => {
-  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
-  const handleOpenAccountModal = () => setIsAccountModalOpen(true);
-
-  const closeModal = () => {
-    setIsAccountModalOpen(false);
-  };
-
-  useEffect(() => {
-    function handleOverlayClose(e) {
-      if (!e.target.closest(".modal__content")) {
-        closeModal();
-      }
-    }
-    document.addEventListener("mousedown", handleOverlayClose);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOverlayClose);
-    };
-  }, []);
-
   return (
     <div className="App">
-      <Header onAccountOpen={handleOpenAccountModal}/>
+      <Header />
+
       <div className="App-content">
         <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
         <Main products={products} />
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
-        <Footer/>
+        <Footer />
       </div>
-      {isAccountModalOpen && (
-        <AccountModal onMouseLeaveCLose={closeModal} onClickClose={closeModal} />
-      )}
     </div>
   );
 };
