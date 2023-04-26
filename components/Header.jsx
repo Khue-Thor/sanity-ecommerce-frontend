@@ -32,7 +32,7 @@ const Header = ({ onAccountOpen }) => {
     };
   }, []);
   return (
-    <div className="header" onMouseOver={handleOpenAccountModal}>
+    <div className="header" >
       <div className="header__container">
         <Link href={"/"}>
           <Image src={logo} alt="logo" className="header__logo" />
@@ -49,7 +49,7 @@ const Header = ({ onAccountOpen }) => {
         </div> */}
 
         <div className="header__menu-wrapper">
-          <button className="header__button" onMouseOver={onAccountOpen}>
+          <button className="header__button" onMouseOver={handleOpenAccountModal}>
             Account
           </button>
 
