@@ -13,6 +13,11 @@ export default {
       }
     },
     { 
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+    },
+    { 
       name: 'desc',
       title: 'Desc',
       type: 'string',

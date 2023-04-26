@@ -18,7 +18,7 @@ const Cart = () => {
   const { totalPrice, totalQuantities, cartItems, toggleCartItemQuantity, onRemove } =
     useStateContext();
 
-  const handleCheckOut = async () => {
+  const handleCheckout = async () => {
     const stripe = await getStripe();
 
     const response = await fetch("/api/stripe", {
@@ -29,11 +29,11 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    if (response.statusCode === 500) return;
+    if (response.status === 500) return;
 
     const data = await response.json();
     toast.loading("Redirecting...");
-   stripe.redirectToCheckout({ sessionId: data.id});
+    stripe.redirectToCheckout({ sessionId: data.id });
   };
   return (
     <div className="cart">
@@ -101,7 +101,7 @@ const Cart = () => {
               <span className="cart__checkout-total-price">${totalPrice}</span>
             </p>
           )}
-          <button type="button" className="cart__checkout-button" onClick={handleCheckOut}>
+          <button type="button" className="cart__checkout-button" onClick={handleCheckout}>
             Proceed to Checkout
           </button>
         </div>
