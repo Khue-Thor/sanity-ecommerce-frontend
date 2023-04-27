@@ -3,15 +3,20 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from "react-
 import { client, urlFor } from "../../lib/client";
 import { RecProduct, Header, Footer } from "@/components";
 import { useStateContext } from "../../context/StateContext";
+import Link from "next/link";
 
 const ProductDetails = ({ product, products }) => {
   const { image, desc, price } = product;
   const [index, setIndex] = useState(0);
   const { increaseQty, decreaseQty, qty, onAdd } = useStateContext();
 
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+  };
+
   return (
     <div className="product">
-      <Header/>
+      <Header />
       <div className="product__detail-container">
         <div>
           <div className="product__image-container">
@@ -68,9 +73,15 @@ const ProductDetails = ({ product, products }) => {
               >
                 Add to Cart
               </button>
-              <button type="button" className="product__buy product__button">
-                Buy Now
-              </button>
+              <Link href={"/cart"}>
+                <button
+                  type="button"
+                  className="product__buy product__button"
+                  onClick={handleBuyNow}
+                >
+                  Buy Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,7 +96,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

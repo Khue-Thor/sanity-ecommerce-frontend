@@ -1,8 +1,13 @@
 import React from "react";
 import { urlFor } from "../lib/client";
 import Link from "next/link";
+import { useStateContext } from "@/context/StateContext";
 
 const ProductCard = ({ product: { image, desc, slug, price }, onAdd }) => {
+  const { qty } = useStateContext();
+  const handleBuyNow = () => {
+    onAdd(qty);
+  };
   return (
     <div className="card">
       <div className="card__content">
@@ -14,16 +19,18 @@ const ProductCard = ({ product: { image, desc, slug, price }, onAdd }) => {
           <p className="card__price">
             price: <span className="card__price-number">${price}</span>
           </p>
-          <button
-            type="button"
-            className="card__add-button card__button"
-            onClick={onAdd}
-          >
+          <button type="button" className="card__add-button card__button" onClick={onAdd}>
             Add To Cart
           </button>
-          <button type="button" className="card__add-checkout card__button">
-            Check Out
-          </button>
+          <Link href={'/cart'}>
+            <button
+              type="button"
+              className="card__add-checkout card__button"
+              onClick={handleBuyNow}
+            >
+              Check Out
+            </button>
+          </Link>
         </div>
       </div>
     </div>
