@@ -32,7 +32,7 @@ const Header = ({ onAccountOpen }) => {
     };
   }, []);
   return (
-    <div className="header" >
+    <div className="header">
       <div className="header__container">
         <Link href={"/"}>
           <Image src={logo} alt="logo" className="header__logo" />
@@ -53,7 +53,9 @@ const Header = ({ onAccountOpen }) => {
             Account
           </button>
 
-          <button className="header__button">Orders</button>
+          <Link href={"/signin"} className="header__order-link">
+            <button className="header__button">Orders</button>
+          </Link>
 
           <Link href={"/cart"}>
             <button className="header__button" type="button">

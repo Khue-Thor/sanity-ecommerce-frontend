@@ -8,6 +8,10 @@
   z-index: 100;
 }
 
+.header__order-link {
+  text-decoration: none;
+}
+
 .header__container {
   max-width: 100%;
   display: flex;

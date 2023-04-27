@@ -27,7 +27,7 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
           <label className="modal__form-label">Password</label>
           <input
             id="password"
-            type="text"
+            type="password"
             name="password"
             value={password}
             onChange={handlePassword}
@@ -44,7 +44,7 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
         <p className="sign-in__page-ques">new customer?</p>
         <Link href={"/signup"}>
           <button type="button" className="modal-sign-up__btn modal-btn">
-            Sign up
+            Create an accout
           </button>
         </Link>
       </div>

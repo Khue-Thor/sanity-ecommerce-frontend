@@ -69,7 +69,7 @@ const Sign = () => {
           <label className="modal__form-label">Password</label>
           <input
             id="password"
-            type="text"
+            type="password"
             name="password"
             value={password}
             placeholder="at least 8 characters"
@@ -82,7 +82,7 @@ const Sign = () => {
           <label className="modal__form-label">Re-enter password</label>
           <input
             id="password"
-            type="text"
+            type="password"
             name="password"
             value={confirmPassword}
             onChange={handleConfirmPassword}
