@@ -39,6 +39,8 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
             Sign in
           </button>
         </fieldset>
+        <p className="left-line"></p>
+        <p className="right-line"></p>
         <p className="sign-in__page-ques">new customer?</p>
         <Link href={"/signup"}>
           <button type="button" className="modal-sign-up__btn modal-btn">
