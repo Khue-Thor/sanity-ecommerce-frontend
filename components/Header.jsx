@@ -10,7 +10,7 @@ import logo from "../public/images/logo.svg";
 
 import { useStateContext } from "../context/StateContext";
 
-const Header = ({ onAccountOpen }) => {
+const Header = () => {
   const { totalQuantities } = useStateContext();
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
   const handleOpenAccountModal = () => setIsAccountModalOpen(true);
