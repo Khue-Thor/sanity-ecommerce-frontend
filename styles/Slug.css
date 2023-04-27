@@ -75,6 +75,7 @@
 
 .selected-image {
   background-color:#f02d34;
+  border: 1px rgba(0, 0, 0, 0.5) solid;
   cursor: pointer;
 }
 

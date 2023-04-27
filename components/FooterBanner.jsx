@@ -31,7 +31,9 @@ const FooterBanner = ({
           <p className="footer-banner__small-desc1">{smallText}</p>
           <h3 className="footer-banner__mid-desc">{midText}</h3>
           <h3 className="footer-banner__small-desc2">{desc}</h3>
-         <button className="footer-banner__button">{buttonText}</button>
+          <Link href={`/product/${product}`}>
+            <button className="footer-banner__button">{buttonText}</button>
+          </Link>
         </div>
       </div>
     </div>
