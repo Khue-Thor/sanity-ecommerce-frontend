@@ -8,10 +8,10 @@
   width: 1290px;
   height: 500px;
   background-color: #e0d813;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 30px 50px 30px 50px;
   position: relative;
-  margin: 170px 30px 20px 30px;
+  margin: 130px 30px 20px 30px;
 }
 
 .hero-banner__header-content {
@@ -64,6 +64,14 @@
   z-index: 10000 !important;
   width: 120px;
   height: 50px;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.hero-banner__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.05, 1.05);
 }
 
 .hero-banner__desc-header {

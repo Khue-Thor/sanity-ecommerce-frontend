@@ -49,7 +49,7 @@ const Header = () => {
         </div> */}
 
         <div className="header__menu-wrapper">
-          <button className="header__button" onMouseOver={handleOpenAccountModal}>
+          <button className="header__button" onMouseOver={handleOpenAccountModal} onClick={handleOpenAccountModal}>
             Account
           </button>
 
