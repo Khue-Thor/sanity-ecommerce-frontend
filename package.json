@@ -12,6 +12,8 @@
   "dependencies": {
     "@ionic/react": "^7.0.4",
     "@react-icons/all-files": "^4.1.0",
+    "@sanity/client": "^5.4.2",
+    "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^1.52.1",
     "canvas-confetti": "^1.6.0",
     "eslint": "8.38.0",
