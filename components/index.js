@@ -1,5 +1,4 @@
 export { default as Header } from "./Header";
-export { default as Layout } from './Layout';
 export { default as HeroBanner } from "./HeroBanner";
 export { default as NavBar } from "./NavBar";
 export { default as AccountModal } from "./AccountModal";
