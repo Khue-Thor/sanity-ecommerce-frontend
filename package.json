@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && scp -r ./.next/* khuephumy19@tech-shop.mooo.com:/home/khuephumy19/frontend"
   },
   "dependencies": {
     "@ionic/react": "^7.0.4",
@@ -23,6 +24,18 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
     "stripe": "^12.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "homepage": "https://www.tech-shop.mooo.com",
   "devDependencies": {
