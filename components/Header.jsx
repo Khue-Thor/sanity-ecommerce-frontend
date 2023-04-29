@@ -7,13 +7,18 @@ import AccountModal from "./AccountModal";
 import Image from "next/image";
 import NavBar from "./NavBar";
 import logo from "../public/images/logo.svg";
+import menu from "../public/images/menu.svg";
+import close from "../public/images/close.svg";
 
 import { useStateContext } from "../context/StateContext";
 
 const Header = () => {
   const { totalQuantities } = useStateContext();
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const [isMenuToggle, setIsMenuToggle] = useState(false);
   const handleOpenAccountModal = () => setIsAccountModalOpen(true);
+
+  const handleMenuToggle = () => setIsMenuModalOpen(true);
 
   const closeModal = () => {
     setIsAccountModalOpen(false);
@@ -49,7 +54,11 @@ const Header = () => {
         </div> */}
 
         <div className="header__menu-wrapper">
-          <button className="header__button" onMouseOver={handleOpenAccountModal} onClick={handleOpenAccountModal}>
+          <button
+            className="header__button"
+            onMouseOver={handleOpenAccountModal}
+            onClick={handleOpenAccountModal}
+          >
             Account
           </button>
 
@@ -63,6 +72,37 @@ const Header = () => {
               <span className="header__cart-item-qty">{totalQuantities}</span>
             </button>
           </Link>
+        </div>
+
+        <div className="header__menu-hamburger">
+          <Image
+            src={isMenuToggle ? close : menu}
+            alt="logo"
+            className="header__menu-icon"
+            onClick={() => setIsMenuToggle(!isMenuToggle)}
+          />
+          {isMenuToggle && (
+            <div className="header__menu-modal">
+              <button
+                className="header__button"
+                onMouseOver={handleOpenAccountModal}
+                onClick={handleOpenAccountModal}
+              >
+                Account
+              </button>
+
+              <Link href={"/signin"} className="header__order-link">
+                <button className="header__button">Orders</button>
+              </Link>
+
+              <Link href={"/cart"}>
+                <button className="header__button" type="button">
+                  <AiOutlineShoppingCart className="header__cart-icon" />
+                  <span className="header__cart-item-qty">{totalQuantities}</span>
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       {/* <NavBar /> */}

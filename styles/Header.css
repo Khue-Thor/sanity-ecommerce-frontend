@@ -46,6 +46,13 @@
   display: flex;
   align-items: center;
 }
+.header__menu-hamburger {
+  display: none;
+}
+
+.header__menu-modal {
+  
+}
 
 .header__search-input {
   height: 52px;
@@ -124,4 +131,36 @@
 
 .header__order-link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 708px) {
+  .header__menu-wrapper {
+    display: none;
+  }
+
+  .header__menu-hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .header__menu-modal {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .header__button {
+    border-color: #fff;
+  }
+
+  .header__menu-icon {
+    margin: 30px;
+    cursor: pointer;
+  }
 }
