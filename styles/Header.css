@@ -184,4 +184,15 @@
     margin: 30px;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 330px) {
+    .header__menu-icon {
+      margin: 30px 20px 30px 10px;
+    }
+
+    .header__menu-modal {
+      right: 20px;
+      top: 70px;
+    }
+  }
 }

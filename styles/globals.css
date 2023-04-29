@@ -30,6 +30,7 @@ body,
 .App {
   max-width: 100%;
   background-color: #fff8f4;
+  background-color: rgb(12, 11, 11);
   padding: 0 0 50px 0;
 }
 
