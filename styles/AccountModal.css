@@ -11,7 +11,7 @@
 
 .modal__container {
   max-width: 240px;
-  background-color: #ffffff;
+  background-color: rgb(255, 255,255,0.8);
   border-radius: 10px;
   padding: 20px;
 }

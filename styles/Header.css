@@ -1,6 +1,7 @@
 .header {
   background-color: #eaeaea;
   width: 100%;
+  flex: 1;
   margin: 0;
   position: fixed;
   top: 0;
@@ -14,6 +15,7 @@
 
 .header__container {
   max-width: 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,12 +53,9 @@
   max-width: 663px;
   display: flex;
   align-items: center;
- 
 }
 .header__menu-hamburger {
   display: none;
- 
- 
 }
 
 .header__menu-modal {
@@ -168,16 +167,17 @@
     display: flex;
     flex-direction: column;
     z-index: 100;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
   }
 
   .header__button {
-    border-color: #fff;
+    font-size: 18px;
+    border-color: rgb(255, 255, 255, 0);
   }
 
   .header__button:hover {
-    border-color: #eaeaea;
+    border-color: #052759;
   }
 
   .header__menu-icon {

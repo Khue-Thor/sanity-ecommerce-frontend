@@ -41,8 +41,8 @@
 
 .hero-banner__image {
   position: absolute;
-  top: 0%;
-  right: 25%;
+  top: -10%;
+  right: 10%;
   width: 500px;
   height: 500px;
 }
@@ -94,4 +94,86 @@
   overflow: hidden;
   text-overflow: ellipsis;
   overflow: scroll;
+}
+
+@media screen and (max-width: 1008px) {
+  .hero-banner__container {
+    max-width: 900px;
+    height: 364px;
+    flex-grow: 1;
+  }
+
+  .hero-banner__small-text {
+    font-size: 16px;
+    margin: 50px 0 10px 0;
+  }
+
+  .hero-banner__mid-text {
+    font-size: 28px;
+    margin-top: 4px;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .hero-banner__large-text {
+    font-size: 56px;
+    margin-left: -20px;
+  }
+
+  .hero-banner__image {
+    top: -10%;
+    right: 10%;
+    width: 45%;
+    height: 100%;
+  }
+
+  .hero-banner__bottom-container {
+    margin: -60px 0 0 0;
+  }
+
+  .hero-banner__button {
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 110px;
+    height: 50px;
+    padding: 5px;
+  }
+
+  .hero-banner__desc-header {
+    font-size: 14px;
+  }
+
+  .hero-banner__desc {
+    max-width: 200px;
+    height: 100px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner__container {
+    margin: 120px 18px 20px 18px;
+    padding: 10px;
+  }
+  .hero-banner__small-text {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  .hero-banner__mid-text {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  .hero-banner__large-text {
+    font-size: 48px;
+    margin-left: 10px;
+  }
+
+  .hero-banner__image {
+    top: -4%;
+    width: 40%;
+    height: 50%;
+  }
 }
