@@ -1,7 +1,7 @@
 .modal {
   position: absolute;
   top: 78px;
-  right: 250px;
+  right: 220px;
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
   display: flex;
   align-items: center;
