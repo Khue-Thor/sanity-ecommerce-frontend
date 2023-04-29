@@ -65,7 +65,6 @@ const Header = () => {
           <Link href={"/signin"} className="header__order-link">
             <button className="header__button">Orders</button>
           </Link>
-
           <Link href={"/cart"}>
             <button className="header__button" type="button">
               <AiOutlineShoppingCart className="header__cart-icon" />
@@ -75,6 +74,12 @@ const Header = () => {
         </div>
 
         <div className="header__menu-hamburger">
+          <Link href={"/cart"}>
+            <button className="hide__cart" type="button">
+              <AiOutlineShoppingCart className="header__cart-icon" />
+              <span className="header__cart-item-qty">{totalQuantities}</span>
+            </button>
+          </Link>
           <Image
             src={isMenuToggle ? close : menu}
             alt="logo"
@@ -93,13 +98,6 @@ const Header = () => {
 
               <Link href={"/signin"} className="header__order-link">
                 <button className="header__button">Orders</button>
-              </Link>
-
-              <Link href={"/cart"}>
-                <button className="header__button" type="button">
-                  <AiOutlineShoppingCart className="header__cart-icon" />
-                  <span className="header__cart-item-qty">{totalQuantities}</span>
-                </button>
               </Link>
             </div>
           )}
