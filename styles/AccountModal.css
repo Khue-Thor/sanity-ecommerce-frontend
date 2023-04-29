@@ -45,3 +45,9 @@
   text-decoration: underline rgb(248, 119, 21);
   color: rgb(248, 119, 21);
 }
+
+@media screen and (max-width: 708px) {
+  .modal__description {
+    margin: 0 0 10px 0;
+  }
+}

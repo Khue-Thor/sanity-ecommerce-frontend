@@ -88,14 +88,15 @@ const Header = () => {
           />
           {isMenuToggle && (
             <div className="header__menu-modal">
-              <button
-                className="header__button"
-                onMouseOver={handleOpenAccountModal}
-                onClick={handleOpenAccountModal}
-              >
-                Account
-              </button>
-
+              <Link href={"/signin"}>
+                <button className="modal__signin-link">Sign In</button>
+              </Link>
+              <p className="modal__description">
+                New customer?{" "}
+                <Link href={"/signup"} className="modal__signup-link">
+                  Start here
+                </Link>
+              </p>
               <Link href={"/signin"} className="header__order-link">
                 <button className="header__button">Orders</button>
               </Link>

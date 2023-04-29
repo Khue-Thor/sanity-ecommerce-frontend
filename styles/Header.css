@@ -55,9 +55,13 @@
 }
 .header__menu-hamburger {
   display: none;
+ 
+ 
 }
 
 .header__menu-modal {
+  width: 225px;
+  padding: 20px;
 }
 
 .header__search-input {
@@ -102,7 +106,7 @@
   align-items: center;
   background: transparent;
   padding: 3px 6px 3px 6px;
-  margin: 0;
+  margin: auto;
   text-decoration: none;
   border: 2px #eaeaea solid;
   position: relative;
@@ -165,12 +169,15 @@
     flex-direction: column;
     z-index: 100;
     background-color: #fff;
-    padding: 30px;
     border-radius: 10px;
   }
 
   .header__button {
     border-color: #fff;
+  }
+
+  .header__button:hover {
+    border-color: #eaeaea;
   }
 
   .header__menu-icon {
