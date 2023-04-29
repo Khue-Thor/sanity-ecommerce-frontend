@@ -6,13 +6,41 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && scp -r ./.next/* khuephumy19@tech-shop.mooo.com:/home/khuephumy19/frontend"
   },
   "dependencies": {
+    "@ionic/react": "^7.0.4",
+    "@react-icons/all-files": "^4.1.0",
+    "@sanity/client": "^5.4.2",
+    "@sanity/image-url": "^1.0.2",
+    "@stripe/stripe-js": "^1.52.1",
+    "canvas-confetti": "^1.6.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "ionicons": "^7.1.0",
     "next": "13.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
+    "stripe": "^12.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://www.tech-shop.mooo.com",
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6"
   }
 }

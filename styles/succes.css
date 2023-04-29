@@ -1,0 +1,63 @@
+.success {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success__card {
+  max-width: 500px;
+  background-color: #fff8f4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.success__cart {
+  width: 100px;
+  height: 100px;
+  color: rgb(26, 134, 22);
+  margin: 10px 200px 15px 200px;
+}
+
+.success__thank {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.success__desc {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
+
+.email {
+  text-decoration: none;
+  color: #bab411;
+}
+
+.success__card-button {
+  width: 255px;
+  height: 37px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 15px 0 0 0;
+  background-color: #e0d813;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 0 20px 130px;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.success__card-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1.05, 1.05);
+}
