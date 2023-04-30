@@ -4,15 +4,7 @@ import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 const HeroBanner = ({
-  heroBanner: {
-    largeText1,
-    smallText,
-    midText,
-    desc,
-    product,
-    buttonText,
-    image,
-  },
+  heroBanner: { largeText1, smallText, midText, desc, product, buttonText, image },
 }) => {
   return (
     <div className="hero-banner__section">
@@ -29,7 +21,10 @@ const HeroBanner = ({
           </Link>
           <div className="hero-banner__desc-content">
             <h4 className="hero-banner__desc-header">Description</h4>
-            <p className="hero-banner__desc">{desc}</p>
+            <p className="hero-banner__desc">
+              {desc}
+           
+            </p>
           </div>
         </div>
       </div>
