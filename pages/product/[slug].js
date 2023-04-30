@@ -86,6 +86,26 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
+      <div className="small-product__detail-container">
+      <h4>Details:</h4>
+          <p className="product__desc">{desc}</p>
+
+          <div className="product__rate-container">
+            <div className="product__stars-container">
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiFillStar />
+              <AiOutlineStar />
+            </div>
+            <p>(20)</p>
+          </div>
+          <div>
+          <div className="product__image-container">
+            <img src={urlFor(image && image[index])} className="product__detail-image" />
+          </div>
+        </div>
+      </div>
       <div className="maylike-products-wrapper">
         <h2>You may also like</h2>
         <div className="marquee">

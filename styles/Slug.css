@@ -9,6 +9,10 @@
   padding: 80px 0 0 0;
 }
 
+.small-product__detail-container  {
+  display: none;
+}
+
 .product__image-container {
   max-width: 500px;
   background-color: #d9d9d9;
@@ -56,7 +60,7 @@
   margin: 0 0 15px 0;
 }
 
-.product__small-image-wrapper{
+.product__small-image-wrapper {
   display: flex;
   margin: 0 0 20px 0;
   gap: 10px;
@@ -74,7 +78,7 @@
 }
 
 .selected-image {
-  background-color:#f02d34;
+  background-color: #f02d34;
   border: 1px rgba(0, 0, 0, 0.5) solid;
   cursor: pointer;
 }
@@ -172,12 +176,15 @@
 
 .maylike-products-wrapper {
   margin-top: 120px;
+  max-width: 1440px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .maylike-products-wrapper h2 {
   text-align: center;
-  margin: 50px;
+  margin: 0 0 20px 30%;
   color: #324d67;
-
+  text-align: center;
   font-size: 28px;
 }
 .maylike-products-container {
@@ -185,7 +192,6 @@
   justify-content: center;
   gap: 15px;
   margin: 20px 0 20px 0;
-
 }
 
 .track {
@@ -198,6 +204,87 @@
   animation-play-state: paused;
 }
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-80%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-80%);
+  }
 }
+
+@media screen and (max-width: 1008px) {
+  .product__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .product__image-container {
+    max-width: 340px;
+    background-color: #d9d9d9;
+    margin: 100px 0 0 50px;
+    border-radius: 20px;
+  }
+  
+  .product__detail-image {
+    max-width: 340px;
+    height: auto;
+  }
+
+  .product__small-image-wrapper {
+    display: flex;
+    margin: 0 0 20px 0;
+    gap: 5px;
+  }
+  
+  .product__small-card {
+    width: 76px;
+  }
+  
+  .product__small-image {
+    width: 76px;
+    height: auto;
+    border-radius: 15px;
+    background-color: #ebebeb;
+  }
+  .selected-image {
+    background-color: #f02d34;
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+    cursor: pointer;
+  }
+
+
+}
+
+
+@media screen and (max-width: 408px) {
+
+  .small-product__detail-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1008px;
+    margin: 130px 20px 0 20px;
+  }
+
+  .product__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .product__image-container {
+    max-width: 340px;
+    background-color: #d9d9d9;
+    margin: 100px 0 0 50px;
+    border-radius: 20px;
+  }
+  
+  .product__detail-image {
+    max-width: 340px;
+    height: auto;
+  }
+
+}
+
