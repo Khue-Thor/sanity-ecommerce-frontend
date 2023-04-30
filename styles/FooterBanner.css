@@ -115,7 +115,7 @@
 
   .footer-banner__image {
     position: absolute;
-    top: -14%;
+    top: -10%;
     right: 10%;
     width: 50%;
     height: 90%;
@@ -146,7 +146,14 @@
       position: absolute;
       top: -4%;
       right: 0%;
-      width: 55%;
+      width: 50%;
+      height: 55%;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .footer-banner__image {
+      width: 60%;
       height: 55%;
     }
   }
