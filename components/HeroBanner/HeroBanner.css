@@ -58,7 +58,7 @@
   background-color: #f02d34;
   color: white;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   z-index: 10000 !important;
@@ -76,7 +76,7 @@
 
 .hero-banner__desc-header {
   color: #5f5f5f;
-  font-weight: 100;
+  font-weight: 400;
   text-align: end;
   margin-bottom: 12px;
   font-weight: 700;
@@ -90,7 +90,7 @@
   height: 100px;
   color: #5f5f5f;
   line-height: 20px;
-  font-weight: 100;
+  font-weight: 400;
   text-align: end;
   white-space: nowrap;
   overflow: hidden;
@@ -182,9 +182,9 @@
   .hero-banner__button {
     border-radius: 15px;
     font-size: 14px;
-    font-weight: 500;
-    width: 100px;
-    height: 50px;
+    font-weight: 400;
+    width: 90px;
+    height: 40px;
     padding: 5px;
   }
 

@@ -1,15 +1,16 @@
 @import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
 @import url(../components/Header/Header.css);
 @import url(./NavBar.css);
 @import url(../components/HeroBanner/HeroBanner.css);
 @import url(../components/Main/Main.css);
 @import url(../components/AccountModal/AccountModal.css);
+@import url(../components/FooterBanner/FooterBanner.css);
 @import url(../components/Footer/Footer.css);
 @import url(../components/RecProduct/RecProduct.css);
 @import url(../components/ProductCard/ProductCard.css);
 @import url(./Slug.css);
 @import url(./Cart.css);
-@import url(../components/FooterBanner/FooterBanner.css);
 @import url(./succes.css);
 @import url(./signin.css);
 @import url(./signup.css);
@@ -19,8 +20,7 @@ body,
 * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 ::-webkit-scrollbar {
