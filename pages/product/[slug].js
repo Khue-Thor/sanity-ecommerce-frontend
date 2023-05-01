@@ -29,10 +29,10 @@ const ProductDetails = ({ product, products }) => {
 
           <div className="product__rate-container">
             <div className="product__stars-container">
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
+              <AiFillStar className="product__rate-star" />
+              <AiFillStar className="product__rate-star" />
+              <AiFillStar className="product__rate-star" />
+              <AiFillStar className="product__rate-star" />
               <AiOutlineStar />
             </div>
             <p>(20)</p>
@@ -107,50 +107,46 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <p className="product__price">${price}</p>
         <div className="product__small-image-wrapper">
-            {image?.map((item, i) => (
-              <img
-                key={i}
-                src={urlFor(item)}
-                className={
-                  i === index ? "product__small-image selected-image" : "product__small-image"
-                }
-                onMouseEnter={() => setIndex(i)}
-              />
-            ))}
+          {image?.map((item, i) => (
+            <img
+              key={i}
+              src={urlFor(item)}
+              className={
+                i === index ? "product__small-image selected-image" : "product__small-image"
+              }
+              onMouseEnter={() => setIndex(i)}
+            />
+          ))}
+        </div>
+        <div className="order-section-card">
+          <div className="product__quantity">
+            <h3 className="product__quantity-title">Quantity:</h3>
+            <p className="product__quantity-button-container">
+              <span className="product__quantity-button decrease-button" onClick={decreaseQty}>
+                <AiOutlineMinus className="button-icon" />
+              </span>
+              <span className="quantity_count">{qty}</span>
+              <span className="product__quantity-button increase-button " onClick={increaseQty}>
+                <AiOutlinePlus className="button-icon" />
+              </span>
+            </p>
           </div>
-          <div className="order-section-card">
-            <div className="product__quantity">
-              <h3 className="product__quantity-title">Quantity:</h3>
-              <p className="product__quantity-button-container">
-                <span className="product__quantity-button decrease-button" onClick={decreaseQty}>
-                  <AiOutlineMinus className="button-icon" />
-                </span>
-                <span className="quantity_count">{qty}</span>
-                <span className="product__quantity-button increase-button " onClick={increaseQty}>
-                  <AiOutlinePlus className="button-icon" />
-                </span>
-              </p>
-            </div>
 
-            <div className="product__order-button-container">
-              <button
-                type="button"
-                className="product__add-to-cart product__button"
-                onClick={() => onAdd(product, qty)}
-              >
-                Add to Cart
+          <div className="product__order-button-container">
+            <button
+              type="button"
+              className="product__add-to-cart product__button"
+              onClick={() => onAdd(product, qty)}
+            >
+              Add to Cart
+            </button>
+            <Link href={"/cart"}>
+              <button type="button" className="product__buy product__button" onClick={handleBuyNow}>
+                Buy Now
               </button>
-              <Link href={"/cart"}>
-                <button
-                  type="button"
-                  className="product__buy product__button"
-                  onClick={handleBuyNow}
-                >
-                  Buy Now
-                </button>
-              </Link>
-            </div>
+            </Link>
           </div>
+        </div>
       </div>
       <div className="maylike-products-wrapper">
         <h2 className="maylike-products__header">You may also like</h2>
