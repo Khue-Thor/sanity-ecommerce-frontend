@@ -105,7 +105,7 @@ const Cart = () => {
               Proceed to Checkout
             </button>
           ) : (
-            <button type="button" className="cart__checkout-button" onClick={handleCheckout} >
+            <button type="button" className="cart__checkout-button" onClick={handleCheckout}>
               Proceed to Checkout
             </button>
           )}
