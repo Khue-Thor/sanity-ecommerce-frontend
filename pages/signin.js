@@ -11,7 +11,7 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
         </Link>
         <fieldset className="modal__form-fieldset">
           <h2>Sign in:</h2>
-          <label className="modal__form-label">Email or Phone number</label>
+          <label className="modal__form-label">Email*</label>
           <input
             id="email"
             type="text"
@@ -20,6 +20,7 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
             minLength="1"
             maxLength="30"
             onChange={handleEmail}
+            placeholder="Your email"
             required
             className="modal__form-input"
           />
@@ -32,6 +33,7 @@ const Signin = ({ email, handleEmail, password, handlePassword }) => {
             value={password}
             onChange={handlePassword}
             required
+            placeholder="Password"
             className="modal__form-input"
           />
           <span className="modal__input-error"></span>

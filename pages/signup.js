@@ -63,6 +63,7 @@ const Sign = () => {
             maxLength="30"
             onChange={handleEmail}
             required
+            placeholder="Your email"
             className="modal__form-input"
           />
           <span className="modal__input-error"></span>
@@ -87,6 +88,7 @@ const Sign = () => {
             value={confirmPassword}
             onChange={handleConfirmPassword}
             required
+            placeholder="Confirm password"
             className="modal__form-input"
           />
           <span className="modal__input-error"></span>
