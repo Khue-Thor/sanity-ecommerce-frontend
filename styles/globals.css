@@ -13,7 +13,6 @@
 @import url(./signin.css);
 @import url(./signup.css);
 
-
 html,
 body,
 * {
@@ -53,4 +52,15 @@ body,
 
 .page-back-arrow:hover {
   color: #2995ae;
+}
+
+.disabled-button {
+  background-color: rgb(234, 242, 249);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.disabled-button:hover {
+  transform: scale(1, 1);
+  opacity: 1;
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   AiOutlineMinus,
@@ -6,7 +6,6 @@ import {
   AiOutlineLeft,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 import { Header, Footer } from "@/components";
 
@@ -101,9 +100,15 @@ const Cart = () => {
               <span className="cart__checkout-total-price">${totalPrice}</span>
             </p>
           )}
-          <button type="button" className="cart__checkout-button" onClick={handleCheckout}>
-            Proceed to Checkout
-          </button>
+          {cartItems.length < 1 ? (
+            <button type="button" className="cart__checkout-button disabled-button" disabled>
+              Proceed to Checkout
+            </button>
+          ) : (
+            <button type="button" className="cart__checkout-button" onClick={handleCheckout} >
+              Proceed to Checkout
+            </button>
+          )}
         </div>
       </div>
       <Footer />
