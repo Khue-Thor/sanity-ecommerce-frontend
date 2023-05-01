@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import AccountModal from "./AccountModal";
+import AccountModal from "../AccountModal/AccountModal";
 
 import Image from "next/image";
-import NavBar from "./NavBar";
-import logo from "../public/images/logo.svg";
-import menu from "../public/images/menu.svg";
-import close from "../public/images/close.svg";
+import NavBar from "../NavBar";
+import logo from "../../public/images/logo.svg";
+import menu from "../../public/images/menu.svg";
+import close from "../../public/images/close.svg";
 
-import { useStateContext } from "../context/StateContext";
+import { useStateContext } from "../../context/StateContext";
 
 const Header = () => {
   const { totalQuantities } = useStateContext();

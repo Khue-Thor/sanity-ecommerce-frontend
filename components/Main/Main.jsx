@@ -1,6 +1,6 @@
 import React from "react";
-import ProductCard from "./ProductCard";
-import { useStateContext } from "../context/StateContext";
+import ProductCard from "../ProductCard/ProductCard";
+import { useStateContext } from "../../context/StateContext";
 
 const Main = ({ products }) => {
   const { qty, onAdd } = useStateContext();
